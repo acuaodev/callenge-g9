@@ -15,12 +15,13 @@ function agregarAmigo(){
     }
     
     amigos.push(input.value)    
-    lista.innerHTML == ""
-    const li = document.createElement("li")
+    lista.innerHTML = ""
+    let html = "";
     for (let index = 0; index < amigos.length; index++) {
-        li.textContent = amigos[index]
-        lista.appendChild(li)
+        html += `<li> ${amigos[index]}</li>`;
     }
+    lista.innerHTML = html;
+
     input.value = ""
 }
 
